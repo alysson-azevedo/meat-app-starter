@@ -8,6 +8,7 @@ import {AppComponent} from './app.component';
 import {MT_ROUTES} from './app.routes';
 import {HomeComponent} from './home/home.component';
 import {HeaderComponent} from './header/header.component';
+import {RestaurantsComponent} from './restaurants/restaurants.component';
 import {AboutComponent} from './about/about.component';
 
 
@@ -16,6 +17,7 @@ import {AboutComponent} from './about/about.component';
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    RestaurantsComponent,
     AboutComponent
   ],
   imports: [

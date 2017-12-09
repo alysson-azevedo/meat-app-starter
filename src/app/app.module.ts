@@ -8,13 +8,15 @@ import {AppComponent} from './app.component';
 import {MT_ROUTES} from './app.routes';
 import {HomeComponent} from './home/home.component';
 import {HeaderComponent} from './header/header.component';
+import {AboutComponent} from './about/about.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

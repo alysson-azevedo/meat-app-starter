@@ -20,6 +20,7 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     HeaderComponent,
     RestaurantsComponent,
+    RestaurantComponent,
     AboutComponent,
   ],
   imports: [

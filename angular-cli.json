@@ -65,7 +65,7 @@
       "spec": false
     },
     "component": {
-      "spec": true,
+      "spec": false,
       "inlineStyle": false,
       "inlineTemplate": false
     }

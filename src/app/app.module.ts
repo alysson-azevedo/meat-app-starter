@@ -5,16 +5,19 @@ import {RouterModule} from '@angular/router';
 
 
 import {AppComponent} from './app.component';
+import {MT_ROUTES} from './app.routes';
+import {HomeComponent} from './home/home.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule
+    RouterModule.forRoot(MT_ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

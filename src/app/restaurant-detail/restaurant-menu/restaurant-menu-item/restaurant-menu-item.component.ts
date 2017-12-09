@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { RestaurantMenuItem } from './restaurant-menu-item.model';
+import { ShoppingCartService } from '../../shopping-cart/shopping-cart.service';
 
 @Component({
   selector: 'mt-restaurant-menu-item',
@@ -8,10 +9,15 @@ import { RestaurantMenuItem } from './restaurant-menu-item.model';
 export class RestaurantMenuItemComponent implements OnInit {
 
   @Input() menuItem: RestaurantMenuItem;
+  @Output() add = new EventEmitter();
 
-  constructor() { }
+  constructor(private cartService: ShoppingCartService) {
+  }
 
   ngOnInit() {
   }
 
+  addItem() {
+    this.cartService.addItem(this.menuItem);
+  }
 }

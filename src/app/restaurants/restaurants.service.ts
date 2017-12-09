@@ -15,4 +15,9 @@ export class RestaurantsService {
     return this.http.get(`${MT_API}/restaurants`, {params: {q: query}})
       .map((response: Response) => response.json());
   }
+
+  restaurantById(id: string): Observable<Restaurant> {
+    return this.http.get(`${MT_API}/restaurants/${id}`)
+      .map((response: Response) => response.json());
+  }
 }

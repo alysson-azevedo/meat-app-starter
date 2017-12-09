@@ -12,6 +12,7 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantsService } from './restaurants/restaurants.service';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { AboutComponent } from './about/about.component';
+import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AboutComponent } from './about/about.component';
     HeaderComponent,
     RestaurantsComponent,
     RestaurantComponent,
+    RestaurantDetailComponent,
     AboutComponent,
   ],
   imports: [

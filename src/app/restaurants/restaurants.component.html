@@ -5,20 +5,19 @@
   </h1>
 </section>
 
-
 <section class="content">
 
   <div class="row">
-    <div class="col-sm-6 col-xs-12">
-      <a href="detail-restaurant.html">
+    <div *ngFor="let restaurant of restaurants" class="col-sm-6 col-xs-12">
+      <a>
         <div class="place-info-box">
-          <span class="place-info-box-icon"><img src="assets/img/restaurants/tasty.png"/></span>
+          <span class="place-info-box-icon"><img [src]="restaurant.imagePath"/></span>
 
           <div class="place-info-box-content">
-            <span class="place-info-box-text">Tasty Treats</span>
-            <span class="place-info-box-star"><i class="fa fa-star"></i> 4.5</span>
-            <span class="place-info-box-detail">Bakery</span>
-            <span class="place-info-box-detail">40-65m</span>
+            <span class="place-info-box-text">{{restaurant.name}}</span>
+            <span class="place-info-box-star"><i class="fa fa-star"></i> {{restaurant.rating}}</span>
+            <span class="place-info-box-detail">{{restaurant.category}}</span>
+            <span class="place-info-box-detail">{{restaurant.deliveryEstimate}}</span>
           </div>
           <!-- /.info-box-content -->
         </div>
@@ -26,91 +25,6 @@
       <!-- /.info-box -->
     </div>
     <!-- /.col -->
-
-    <div class="col-sm-6 col-xs-12">
-      <div class="place-info-box">
-        <span class="place-info-box-icon"><img src="assets/img/restaurants/icy.png"/></span>
-
-        <div class="place-info-box-content">
-          <span class="place-info-box-text">Ice Cream</span>
-          <span class="place-info-box-star"><i class="fa fa-star"></i> 4.5</span>
-          <div class="place-info-box-detail">Ice Creams</div>
-          <span class="place-info-box-detail">40-65m</span>
-
-        </div>
-        <!-- /.info-box-content -->
-      </div>
-      <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
-
-    <div class="col-sm-6 col-xs-12">
-      <div class="place-info-box">
-        <span class="place-info-box-icon"><img src="assets/img/restaurants/burgerhouse.png"/></span>
-
-        <div class="place-info-box-content">
-          <span class="place-info-box-text">Burger House</span>
-          <span class="place-info-box-star"><i class="fa fa-star"></i> 4.5</span>
-          <div class="place-info-box-detail">Hamburgers</div>
-          <span class="place-info-box-detail">40-65m</span>
-
-        </div>
-        <!-- /.info-box-content -->
-      </div>
-      <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
-
-    <div class="col-sm-6 col-xs-12">
-      <div class="place-info-box">
-        <span class="place-info-box-icon"><img src="assets/img/restaurants/coffeecorner.png"/></span>
-
-        <div class="place-info-box-content">
-          <span class="place-info-box-text">Coffee Corner</span>
-          <span class="place-info-box-star"><i class="fa fa-star"></i> 4.5</span>
-          <div class="place-info-box-detail">Coffee Shop</div>
-          <span class="place-info-box-detail">40-65m</span>
-
-        </div>
-        <!-- /.info-box-content -->
-      </div>
-      <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
-    <div class="col-sm-6 col-xs-12">
-      <div class="place-info-box">
-        <span class="place-info-box-icon"><img src="assets/img/restaurants/greenfood.png"/></span>
-
-        <div class="place-info-box-content">
-          <span class="place-info-box-text">Green Food</span>
-          <span class="place-info-box-star"><i class="fa fa-star"></i> 4.5</span>
-          <div class="place-info-box-detail">Traditional</div>
-          <span class="place-info-box-detail">40-65m</span>
-
-        </div>
-        <!-- /.info-box-content -->
-      </div>
-      <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
-
-    <div class="col-sm-6 col-xs-12">
-      <div class="place-info-box">
-        <span class="place-info-box-icon"><img src="assets/img/restaurants/breadbakery.png"/></span>
-
-        <div class="place-info-box-content">
-          <span class="place-info-box-text">Bread &amp; Bakery</span>
-          <span class="place-info-box-star"><i class="fa fa-star"></i> 4.5</span>
-          <span class="place-info-box-detail">Bakery</span>
-          <span class="place-info-box-detail">40-65m</span>
-
-        </div>
-        <!-- /.info-box-content -->
-      </div>
-      <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
-
   </div>
 
 </section>

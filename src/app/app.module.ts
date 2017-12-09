@@ -8,10 +8,10 @@ import { AppComponent } from './app.component';
 import { MT_ROUTES } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { AboutComponent } from './about/about.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantsService } from './restaurants/restaurants.service';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
-import { AboutComponent } from './about/about.component';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 
 
@@ -20,10 +20,10 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    AboutComponent,
     RestaurantsComponent,
     RestaurantComponent,
     RestaurantDetailComponent,
-    AboutComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
 
 export const MT_ROUTES: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'restaurants', component: RestaurantsComponent},
+  {path: 'about', component: AboutComponent},
   {path: 'restaurants/:id', component: RestaurantDetailComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'restaurants', component: RestaurantsComponent},
 ];

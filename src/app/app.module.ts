@@ -14,6 +14,7 @@ import { RestaurantsService } from './restaurants/restaurants.service';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { RestaurantMenuComponent } from './restaurant-detail/restaurant-menu/restaurant-menu.component';
+import { RestaurantMenuItemComponent } from './restaurant-detail/restaurant-menu/restaurant-menu-item/restaurant-menu-item.component';
 import { RestaurantReviewsComponent } from './restaurant-detail/restaurant-reviews/restaurant-reviews.component';
 
 
@@ -27,6 +28,7 @@ import { RestaurantReviewsComponent } from './restaurant-detail/restaurant-revie
     RestaurantComponent,
     RestaurantDetailComponent,
     RestaurantMenuComponent,
+    RestaurantMenuItemComponent,
     RestaurantReviewsComponent,
   ],
   imports: [

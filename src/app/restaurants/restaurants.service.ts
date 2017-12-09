@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { MT_API } from '../app.api';
 import { Restaurant } from './restaurant/restaurant.model';
+import { RestaurantMenuItem } from '../restaurant-detail/restaurant-menu/restaurant-menu-item/restaurant-menu-item.model';
 
 @Injectable()
 export class RestaurantsService {
@@ -18,6 +19,11 @@ export class RestaurantsService {
 
   restaurantById(id: string): Observable<Restaurant> {
     return this.http.get(`${MT_API}/restaurants/${id}`)
+      .map((response: Response) => response.json());
+  }
+
+  menuOfRestaurantById(id: string): Observable<RestaurantMenuItem[]> {
+    return this.http.get(`${MT_API}/restaurants/${id}/menu`)
       .map((response: Response) => response.json());
   }
 }

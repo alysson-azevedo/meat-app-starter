@@ -10,6 +10,7 @@ import {HomeComponent} from './home/home.component';
 import {HeaderComponent} from './header/header.component';
 import {RestaurantsComponent} from './restaurants/restaurants.component';
 import {RestaurantsService} from './restaurants/restaurants.service';
+import {RestaurantComponent} from './restaurants/restaurant/restaurant.component';
 import {AboutComponent} from './about/about.component';
 
 
@@ -19,7 +20,8 @@ import {AboutComponent} from './about/about.component';
     HomeComponent,
     HeaderComponent,
     RestaurantsComponent,
-    AboutComponent
+    AboutComponent,
+    RestaurantComponent
   ],
   imports: [
     BrowserModule,

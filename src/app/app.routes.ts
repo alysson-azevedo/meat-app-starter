@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { RestaurantMenuComponent } from './restaurant-detail/restaurant-menu/restaurant-menu.component';
 import { RestaurantReviewsComponent } from './restaurant-detail/restaurant-reviews/restaurant-reviews.component';
+import { OrderComponent } from './order/order.component';
 
 export const MT_ROUTES: Routes = [
   {path: '', component: HomeComponent},
@@ -19,4 +20,5 @@ export const MT_ROUTES: Routes = [
     ]
   },
   {path: 'restaurants', component: RestaurantsComponent},
+  {path: 'order', component: OrderComponent},
 ];

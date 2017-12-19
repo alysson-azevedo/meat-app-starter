@@ -20,6 +20,7 @@ import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-
 import { OrderComponent } from './order/order.component';
 import { OrderItemsComponent } from './order/order-items/order-items.component';
 import { OrderSummaryComponent } from './order/order-summary/order-summary.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { OrderSummaryComponent } from './order/order-summary/order-summary.compo
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(MT_ROUTES)
   ],
   providers: [RestaurantsService, ShoppingCartService, {provide: LOCALE_ID, useValue: 'pt-BR'}],

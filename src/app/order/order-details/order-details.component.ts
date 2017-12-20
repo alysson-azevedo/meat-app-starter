@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'mt-order-summary',
-  templateUrl: './order-summary.component.html'
+  selector: 'mt-order-details',
+  templateUrl: './order-details.component.html'
 })
-export class OrderSummaryComponent implements OnInit {
+export class OrderDetailsComponent implements OnInit {
 
   @Input() cartTotal: number;
   @Input() transportFee: number;

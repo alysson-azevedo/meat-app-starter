@@ -20,7 +20,7 @@ import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shoppin
 import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
 import { OrderComponent } from './order/order.component';
 import { OrderItemsComponent } from './order/order-items/order-items.component';
-import { OrderSummaryComponent } from './order/order-summary/order-summary.component';
+import { OrderDetailsComponent } from './order/order-details/order-details.component';
 import { InputContainerComponent } from './shared/input-container/input-container.component';
 import { RadioInputsComponent } from './shared/radio-inputs/radio-inputs.component';
 
@@ -40,7 +40,7 @@ import { RadioInputsComponent } from './shared/radio-inputs/radio-inputs.compone
     ShoppingCartComponent,
     OrderComponent,
     OrderItemsComponent,
-    OrderSummaryComponent,
+    OrderDetailsComponent,
     InputContainerComponent,
     RadioInputsComponent,
   ],

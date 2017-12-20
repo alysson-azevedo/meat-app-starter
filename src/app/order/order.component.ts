@@ -2,14 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from '../restaurant-detail/shopping-cart/shopping-cart.service';
 import { CartItem } from '../restaurant-detail/shopping-cart/cart-item.model';
 import { RadioOption } from '../shared/radio-inputs/radio-option.model';
+import { Order, OrderItem } from './order.model';
 
 @Component({
   selector: 'mt-order',
   templateUrl: './order.component.html'
 })
 export class OrderComponent implements OnInit {
-
-  cartItems: CartItem[] = [];
 
   transportFee = 8;
 
@@ -23,7 +22,10 @@ export class OrderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cartItems = this.cartService.items;
+  }
+
+  cartItems(): CartItem[] {
+    return this.cartService.items;
   }
 
   onIncreaseQtd(item: CartItem) {
@@ -44,5 +46,13 @@ export class OrderComponent implements OnInit {
 
   total(): number {
     return this.cartTotal() + this.transportFee;
+  }
+
+  checkOrder(order: Order) {
+    order.orderItems = this.cartItems().map((item: CartItem) => new OrderItem(item.menuItem.id, item.quantity));
+    this.cartService.checkOrder(order).subscribe((orderId: string) => {
+      console.log(`Compra concluída: ${orderId}`);
+      this.cartService.clear();
+    });
   }
 }

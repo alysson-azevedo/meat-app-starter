@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Headers, Http, ResponseOptions } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import { CartItem } from './cart-item.model';
 import { RestaurantMenuItem } from '../restaurant-menu/restaurant-menu-item/restaurant-menu-item.model';
+import { Order } from '../../order/order.model';
+import { MT_API } from '../../app.api';
 
 @Injectable()
 export class ShoppingCartService {
 
   items: CartItem[] = [];
 
-  constructor() {
+  constructor(private http: Http) {
   }
 
   addItem(menuItem: RestaurantMenuItem) {
@@ -42,5 +46,13 @@ export class ShoppingCartService {
     return this.items
       .map(item => item.value())
       .reduce((prev, value) => prev + value, 0);
+  }
+
+  checkOrder(order: Order): Observable<string> {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(`${MT_API}/orders`, JSON.stringify(order), new ResponseOptions({headers: headers}))
+      .map(response => response.json())
+      .map(response => response.id);
   }
 }

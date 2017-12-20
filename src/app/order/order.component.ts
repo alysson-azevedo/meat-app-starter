@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from '../restaurant-detail/shopping-cart/shopping-cart.service';
 import { CartItem } from '../restaurant-detail/shopping-cart/cart-item.model';
+import { RadioOption } from '../shared/radio-inputs/radio-option.model';
 
 @Component({
   selector: 'mt-order',
@@ -12,6 +13,11 @@ export class OrderComponent implements OnInit {
 
   transportFee = 8;
 
+  paymentOptions: RadioOption[] = [
+    {label: 'Dinheiro', value: 'MON'},
+    {label: 'Cartão de Débito', value: 'DEB'},
+    {label: 'Cartão Refeição', value: 'REF'},
+  ];
 
   constructor(private cartService: ShoppingCartService) {
   }

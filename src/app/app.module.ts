@@ -22,6 +22,7 @@ import { OrderComponent } from './order/order.component';
 import { OrderItemsComponent } from './order/order-items/order-items.component';
 import { OrderSummaryComponent } from './order/order-summary/order-summary.component';
 import { InputContainerComponent } from './shared/input-container/input-container.component';
+import { RadioInputsComponent } from './shared/radio-inputs/radio-inputs.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { InputContainerComponent } from './shared/input-container/input-containe
     OrderItemsComponent,
     OrderSummaryComponent,
     InputContainerComponent,
+    RadioInputsComponent,
   ],
   imports: [
     BrowserModule,

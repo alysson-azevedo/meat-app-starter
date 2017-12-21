@@ -24,6 +24,7 @@ import { OrderDetailsComponent } from './order/order-details/order-details.compo
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { InputContainerComponent } from './shared/input-container/input-container.component';
 import { RadioInputsComponent } from './shared/radio-inputs/radio-inputs.component';
+import { RatingInputComponent } from './shared/rating-input/rating-input.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { RadioInputsComponent } from './shared/radio-inputs/radio-inputs.compone
     OrderSummaryComponent,
     InputContainerComponent,
     RadioInputsComponent,
+    RatingInputComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MT_ROUTES } from './app.routes';
@@ -22,9 +21,7 @@ import { OrderComponent } from './order/order.component';
 import { OrderItemsComponent } from './order/order-items/order-items.component';
 import { OrderDetailsComponent } from './order/order-details/order-details.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
-import { InputContainerComponent } from './shared/input-container/input-container.component';
-import { RadioInputsComponent } from './shared/radio-inputs/radio-inputs.component';
-import { RatingInputComponent } from './shared/rating-input/rating-input.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -44,15 +41,12 @@ import { RatingInputComponent } from './shared/rating-input/rating-input.compone
     OrderItemsComponent,
     OrderDetailsComponent,
     OrderSummaryComponent,
-    InputContainerComponent,
-    RadioInputsComponent,
-    RatingInputComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule,
-    RouterModule.forRoot(MT_ROUTES)
+    RouterModule.forRoot(MT_ROUTES),
+    SharedModule,
   ],
   providers: [RestaurantsService, ShoppingCartService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]

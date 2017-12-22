@@ -6,7 +6,6 @@ import { OrderComponent } from './order.component';
 import { OrderItemsComponent } from './order-items/order-items.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { OrderSummaryComponent } from './order-summary.component';
-import { OrderService } from './order.service';
 
 const ROUTES: Routes = [
   {path: '', component: OrderComponent},
@@ -14,7 +13,6 @@ const ROUTES: Routes = [
 ];
 @NgModule({
   imports: [SharedModule, RouterModule.forChild(ROUTES)],
-  declarations: [OrderComponent, OrderItemsComponent, OrderDetailsComponent, OrderSummaryComponent],
-  providers: [OrderService]
+  declarations: [OrderComponent, OrderItemsComponent, OrderDetailsComponent, OrderSummaryComponent]
 })
 export class OrderModule { }

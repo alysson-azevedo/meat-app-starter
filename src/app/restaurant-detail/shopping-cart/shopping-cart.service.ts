@@ -11,7 +11,7 @@ export class ShoppingCartService {
 
   items: CartItem[] = [];
 
-  constructor(private http: Http) {
+  constructor() {
   }
 
   addItem(menuItem: RestaurantMenuItem) {
@@ -46,13 +46,5 @@ export class ShoppingCartService {
     return this.items
       .map(item => item.value())
       .reduce((prev, value) => prev + value, 0);
-  }
-
-  checkOrder(order: Order): Observable<string> {
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post(`${MT_API}/orders`, JSON.stringify(order), new ResponseOptions({headers: headers}))
-      .map(response => response.json())
-      .map(response => response.id);
   }
 }
